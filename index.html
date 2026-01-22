@@ -23,7 +23,6 @@
       background-color: white;
     }
 
-    /* ===== Notch ===== */
     .notch-container {
       position: sticky;
       top: 0;
@@ -45,7 +44,7 @@
       align-items: center;
       gap: 12px;
       width: 100%;
-      max-width: 320px;  
+      max-width: 320px;
       justify-content: space-between;
     }
 
@@ -75,31 +74,41 @@
       background-color: #333;
     }
 
-     .image-container {
+    .image-container {
       display: flex;
-      justify-content: center;
+      justify-content: center;   
       padding: 24px;
     }
 
     .image-inner {
       position: relative;
-      width: 70%;         
+      width: 70%;                
       max-width: 1400px;
     }
 
-    .image-inner img {
+     .press-svg {
       width: 100%;
       height: auto;
       display: block;
     }
 
-    @media (max-width: 768px) {
+     .image-link {
+      position: absolute;
+      bottom: 10%;
+      left: 16%;
+      width: 27%;
+      height: 2%;
+      cursor: pointer;
+      z-index: 10;
+    }
+
+     @media (max-width: 768px) {
       .image-container {
         padding: 12px;
       }
 
       .image-inner {
-        width: 100%;    
+        width: 100%;             
       }
 
       .notch {
@@ -136,27 +145,21 @@
       </div>
     </div>
 
-     <div class="image-container">
+    <div class="image-container">
       <div class="image-inner">
-        <img
-          src="https://cdn.prod.website-files.com/6965de79893dc45490ac432e/6971cefcc59673962212df3c_Press%20note%20-%20final.svg"
-          alt="JazzHQ Press Note"
-        />
+        <object
+          type="image/svg+xml"
+          data="https://cdn.prod.website-files.com/6965de79893dc45490ac432e/6971cefcc59673962212df3c_Press%20note%20-%20final.svg"
+          class="press-svg"
+          aria-label="JazzHQ Press Note"
+        ></object>
 
-         <a
+        <a
           href="https://jazzhq.ai"
           target="_blank"
           rel="noopener noreferrer"
           aria-label="Visit JazzHQ"
-          style="
-            position:absolute;
-            bottom:10%;
-            left:16%;
-            width:27%;
-            height:2%;
-            cursor:pointer;
-            z-index:10;
-          "
+          class="image-link"
         ></a>
       </div>
     </div>
