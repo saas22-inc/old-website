@@ -86,13 +86,16 @@
       max-width: 1400px;
     }
 
-     .press-svg {
+    .press-svg {
       width: 100%;
       height: auto;
       display: block;
+      /* Ensure SVG renders crisply */
+      image-rendering: -webkit-optimize-contrast;
+      image-rendering: crisp-edges;
     }
 
-     .image-link {
+    .image-link {
       position: absolute;
       bottom: 10%;
       left: 16%;
@@ -102,7 +105,7 @@
       z-index: 10;
     }
 
-     @media (max-width: 768px) {
+    @media (max-width: 768px) {
       .image-container {
         padding: 12px;
       }
@@ -147,12 +150,11 @@
 
     <div class="image-container">
       <div class="image-inner">
-        <object
-          type="image/svg+xml"
-          data="https://cdn.prod.website-files.com/6965de79893dc45490ac432e/6971cefcc59673962212df3c_Press%20note%20-%20final.svg"
+        <img
+          src="https://cdn.prod.website-files.com/6965de79893dc45490ac432e/6971cefcc59673962212df3c_Press%20note%20-%20final.svg"
+          alt="JazzHQ Press Note"
           class="press-svg"
-          aria-label="JazzHQ Press Note"
-        ></object>
+        />
 
         <a
           href="https://jazzhq.ai"
