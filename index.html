@@ -84,15 +84,16 @@
       position: relative;
       width: 70%;                
       max-width: 1400px;
+      /* Prevent layout shifts */
+      min-height: 0;
     }
 
     .press-svg {
       width: 100%;
       height: auto;
       display: block;
-      /* Ensure SVG renders crisply */
-      image-rendering: -webkit-optimize-contrast;
-      image-rendering: crisp-edges;
+      /* Let browser render SVG naturally at best quality */
+      shape-rendering: geometricPrecision;
     }
 
     .image-link {
@@ -151,7 +152,7 @@
     <div class="image-container">
       <div class="image-inner">
         <img
-          src="https://cdn.prod.website-files.com/6965de79893dc45490ac432e/6971cefcc59673962212df3c_Press%20note%20-%20final.svg"
+          src="https://saas22-strapi.s3.ap-south-1.amazonaws.com/Press_note_final_1_3a3b901408.png"
           alt="JazzHQ Press Note"
           class="press-svg"
         />
